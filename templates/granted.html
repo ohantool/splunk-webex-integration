@@ -1,0 +1,24 @@
+{% extends "temp.html" %}
+
+{% block content %}
+    <h1>CLICK BUTTON TO START THE WEBEX AND SPLUNK INTEGRATION</h1>
+    <div class='center'>
+        <a href="{{ url_for('webexsplunk') }}" id="startButton" style="text-decoration: none;">
+            <div class='button' style='width:512px; text-align:center; background-color:#4CAF50; color:white; padding:10px; border:none; border-radius:5px; cursor:pointer;'>
+                Start Sending Events
+            </div>
+        </a>
+    </div>
+
+    <script>
+        document.getElementById('startButton').addEventListener('click', function (event) {
+            // Prevent multiple clicks
+            const button = event.currentTarget; // Target the <a> element itself
+
+            // Change the text and disable further clicks
+            button.querySelector('.button').innerHTML = "Please put the highest rating for the session ;P"; // Update the inner div's text
+            button.style.pointerEvents = "none"; // Disable all clicks
+            button.querySelector('.button').style.backgroundColor = "gray"; // Gray out the button
+        });
+    </script>
+{% endblock %}
