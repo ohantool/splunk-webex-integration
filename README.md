@@ -7,16 +7,17 @@ __          ________ ____  ________   __   _____ _____  _     _    _ _   _ _  __
     \/  \/   |______|____/|______/_/ \_\ |_____/|_|    |______\____/|_| \_|_|\_\
 contact me if you have any questions https://www.linkedin.com/in/ohantool
 
+This app is integrating Webex Control Hub, utilizing the namouras APIs that are available today in Webex, with Splunk Enterprise or Splunk Cloud Platform (they are almost the same steps). 
+It sends the environmental reading of Webex Workspaces to a Splunk deployment using HEC. 
 
 Make sure to have Python 3 installed.
 credit for oauth2 utility functions code https://github.com/WebexSamples/webex-flask-oauth-example
 
+- Create a Webex Integration https://developer.webex.com/docs/integrations
 - Fill in your Workspace IDs in the oauth2.py file. Please read about it here https://developer.webex.com/docs/api/v1/workspaces
-- Replace the required variables (Client ID, Secrect ID etc...) in the oauth2.py file
+- Replace the required variables (Client ID, Secrect ID etc...) from the Webex integration you just created in the oauth2.py file
 - Replace the URL in the <a> tag in index.html
-- Replace HEC token Details and and your splunk URL in the oauth2.py file
-
-Read how to setup HEC here: https://docs.splunk.com/Documentation/Splunk/9.4.0/Data/UsetheHTTPEventCollector
+- Replace HEC token Details and your splunk URL in the oauth2.py file. Read how to setup HEC here: https://docs.splunk.com/Documentation/Splunk/9.4.0/Data/UsetheHTTPEventCollector
 
 To run the server application, open a command terminal, and navigate to the folder where you saved this Python script.
 
