@@ -1,10 +1,4 @@
 
-__          ________ ____  ________   __   _____ _____  _     _    _ _   _ _  __
-\ \        / /  ____|  _ \|  ____\ \ / /  / ____|  __ \| |   | |  | | \ | | |/ /
- \ \  /\  / /| |__  | |_) | |__   \ V /  | (___ | |__) | |   | |  | |  \| | ' /
-  \ \/  \/ / |  __| |  _ <|  __|   > <    \___ \|  ___/| |   | |  | | . ` |  <  
-   \  /\  /  | |____| |_) | |____ / . \   ____) | |    | |___| |__| | |\  | . \
-    \/  \/   |______|____/|______/_/ \_\ |_____/|_|    |______\____/|_| \_|_|\_\
 contact me if you have any questions https://www.linkedin.com/in/ohantool
 
 This app is integrating Webex Control Hub, utilizing the namouras APIs that are available today in Webex, with Splunk Enterprise or Splunk Cloud Platform (they are almost the same steps). 
@@ -13,7 +7,7 @@ It sends the environmental reading of Webex Workspaces to a Splunk deployment us
 Make sure to have Python 3 installed.
 credit for oauth2 utility functions code https://github.com/WebexSamples/webex-flask-oauth-example
 
-- Create a Webex Integration https://developer.webex.com/docs/integrations
+- Create a Webex Integration https://developer.webex.com/docs/integrations. Make sure you tick spark-admin:workspace_metrics_read in the Scope section
 - Fill in your Workspace IDs in the oauth2.py file. Please read about it here https://developer.webex.com/docs/api/v1/workspaces
 - Replace the required variables (Client ID, Secrect ID etc...) from the Webex integration you just created in the oauth2.py file
 - Replace the URL in the <a> tag in index.html
